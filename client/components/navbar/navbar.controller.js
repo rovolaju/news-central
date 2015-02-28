@@ -5,7 +5,12 @@ angular.module('newsCentralApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+	{
+      'title': 'Articles',
+      'link': '/articles'
+    },
+	];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

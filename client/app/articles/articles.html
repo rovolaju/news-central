@@ -1,0 +1,19 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+   
+  <h1 class="page-header">Latest Articles:</h1>
+  <ul class="comment-list">
+    <li ng-repeat="article in articles">
+	<button type="button" class="close" ng-click="deleteArticle(article)">&times;</button>
+      <header>{{ article.name }}</header>
+	  
+      <p>Autor: {{ article.author.name }}</p>
+
+	  <p>{{ article.info }}</p>
+	  
+    </li>
+  </ul>
+  
+  <a ui-sref="new-article">Create an article</a>
+</div>
