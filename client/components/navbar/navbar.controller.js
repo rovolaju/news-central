@@ -5,8 +5,10 @@ angular.module('newsCentralApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    },
-	{
+    }
+	];
+	
+	$scope.user_menu = [{
       'title': 'Articles',
       'link': '/articles'
     },
