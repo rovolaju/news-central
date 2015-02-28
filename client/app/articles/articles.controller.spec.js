@@ -4,6 +4,7 @@ describe('Controller: ArticlesCtrl', function () {
 
   // load the controller's module
   beforeEach(module('newsCentralApp'));
+  beforeEach(module('socketMock'));
 
   var ArticlesCtrl, scope;
 

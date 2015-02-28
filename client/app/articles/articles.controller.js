@@ -5,8 +5,7 @@ angular.module('newsCentralApp')
     $scope.message = 'Hello';
 	
 	$http.get('/api/articles').success(function(articles) {
-		console.log("Loadint articles");
-		console.log(articles)
+	
       $scope.articles = articles;
  
       // Update array with any new or deleted items pushed from the socket
