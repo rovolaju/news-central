@@ -28,3 +28,29 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+/* client/app/main/main.less */
+ 
+.comment-form {
+ 
+  .btn-primary {
+    margin-top: 7px;
+    float: right;
+  }
+}
+ 
+.comment-list {
+  padding:0;
+  list-style:none;
+}
+
+.comment-list  header {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+ .comment-list li {
+    margin: 7px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
