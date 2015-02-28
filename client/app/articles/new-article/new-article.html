@@ -8,8 +8,10 @@
   
   <form class="comment-form" ng-submit="addArticle()" name="articleForm">
 	<input type="text" class="form-control" ng-model="newArticle.name" placeholder="Enter an article name" required/>
+	<br>
     <textarea class="form-control" ng-model="newArticle.info" rows="3" placeholder="Enter the article content" required></textarea>
-	<input type="checkbox" class="form-control" ng-model="newArticle.active"  required/>
+	<br>
+	<!--<input type="checkbox" class="form-control" ng-model="newArticle.active"  required/>-->
     <input class="btn btn-primary" type="submit" ng-disabled="commentForm.$invalid" value="Post">
   </form>
  

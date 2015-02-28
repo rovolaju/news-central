@@ -5,7 +5,7 @@ angular.module('newsCentralApp')
     $stateProvider
       .state('articles', {
         url: '/articles',
-        templateUrl: 'app/articles/Articles.html',
+        templateUrl: 'app/articles/articles.html',
         controller: 'ArticlesCtrl'
       });
 	  $stateProvider
