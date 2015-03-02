@@ -7,9 +7,7 @@ angular.module('newsCentralApp')
 	};
 	
 	$scope.addArticle = function() {
-	  console.log($scope.newArticle);
-
-      $http.post('/api/articles', $scope.newArticle);
+	  $http.post('/api/articles', $scope.newArticle);
       $scope.newArticle = '';
 	  $state.transitionTo('articles');
     };

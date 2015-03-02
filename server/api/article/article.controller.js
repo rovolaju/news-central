@@ -12,7 +12,7 @@ exports.index = function(req, res) {
     return res.json(200, articles);
   });
   */
-   Article.loadRecent(function (err, comments) {
+   Article.loadRecent({ author: req.user._id },function (err, comments) {
     if(err) { return handleError(res, err); }
     return res.json(200, comments);
   });
@@ -29,7 +29,6 @@ exports.show = function(req, res) {
 
 // Creates a new article in the DB.
 exports.create = function(req, res) {
-	console.log(req)
   delete req.body.date;
   var article = new Article(_.merge({ author: req.user._id }, req.body));
   console.log("Saving article");

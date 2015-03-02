@@ -15,12 +15,21 @@ var ArticleSchema = new Schema({
 });
 
 ArticleSchema.statics = {
-  loadRecent: function(cb) {
+  loadRecent: function(req, cb) {
+  if(req){
+	this.find(req)
+      .populate({path:'author', select: 'name'})
+      .sort('-date')
+      .limit(20)
+      .exec(cb);
+  }
+  else{
     this.find({})
       .populate({path:'author', select: 'name'})
       .sort('-date')
       .limit(20)
       .exec(cb);
+	}
   }
 };
 
